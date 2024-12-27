@@ -1,0 +1,85 @@
+#1. Write a Python program to Count all letters, digits, and special symbols from the given string
+    #Input = “P@#yn26at^&i5ve”
+    #Output: Chars = 8 Digits = 2 Symbol = 3
+
+
+string = input("Enter your own string : ")
+alphabets = digits = special = 0
+
+for i in range(len(string)):
+    if(string[i].isalpha()):
+        alphabets += 1
+    elif(string[i].isdigit()):
+        digits += 1
+    else:
+        special += 1
+
+print("\nTotal Number of Char in this String : ",alphabets)
+print("Total Number of Digits in this String : ",digits)
+print("Total Number of Special Characters in this String : ",special)
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+#2. Write a Python program to remove duplicate characters of a given string.
+    #Input = “String and String Function”
+    #Output: String and Function
+
+string = input("Enter a string : ")
+p = ""
+
+for char in string:
+    if char not in p:
+        p = p+char
+
+print(p)
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+#3. Write a Python program to count Uppercase, Lowercase, special character and numeric values in a given string
+    #Input = “Hell0 W0rld ! 123 * # welcome to pYtHoN”
+    #Output:
+    #UpperCase : 5
+    #LowerCase : 18
+    #NumberCase : 5
+    #SpecialCase : 11
+
+
+string = input("Enter the your own string : ")
+
+upper_case = lower_case =  number = spl_char = 0
+
+for i in range(len(string)):
+    if string[i] >= 'A' and string[i] <= 'Z':
+        upper_case += 1
+    elif string[i] >= 'a' and string[i] <= 'z':
+        lower_case += 1
+    elif string[i] >= '0' and string[i] <= '9':
+        number += 1
+    else:
+        spl_char += 1
+
+print("UpperCase : ",upper_case)
+print("LowerCase : ",lower_case)
+print("NumberCase : ",number)
+print("SpecialCase : ",spl_char)
+
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+#4. Write a Python Count vowels in a string
+    #input= “Welcome to Python Assig
+
+
+string = input("Enter a string : ")
+
+vowels = 'aeiou'
+
+ip_string = string.casefold()
+
+count = {}.fromkeys(vowels, 0)
+
+for char in ip_string:
+    if char in count:
+        count[char] += 1
+
+print(count)

@@ -1,0 +1,60 @@
+# 1. Using input() function take one number from the user and using ternary operators check whether the number is even or odd
+
+# Taking input from the user
+number = int(input("Enter the number : "))
+
+# Using ternary operator to check if the number is even or odd
+result = "Even" if number % 2 == 0 else "Odd"
+
+# Printing the result
+print(f"The number {number} is {result}.")
+
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+# 2. Using input function take two number and then swap the number
+
+# Taking two numbers from the user
+number1 = input("Enter the first number: ")
+number2 = input("Enter the second number: ")
+
+print(f"Before swapping: number1 = {number1}, number2 = {number2}")
+
+# Swapping the numbers
+number1, number2 = number2, number1
+
+print(f"After swapping: number1 = {number1}, number2 = {number2}")
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+# 3. Write a Program to Convert Kilometers to Miles
+
+# Taking input from the user
+kilometers = float(input("Enter the distance in kilometers: "))
+
+# Conversion factor
+conversion_factor = 0.621371
+
+# Converting kilometers to miles
+miles = kilometers * conversion_factor
+
+# Displaying the result
+print(f"{kilometers} kilometers is equal to {miles:.2f} miles.")
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+
+# 4. Find the Simple Interest on Rs. 200 for 5 years at 5% per year.
+
+# Define the principal amount, rate of interest, and time period
+principal = 200
+rate_of_interest = 5
+time_period = 5
+
+# Calculate the simple interest
+simple_interest = (principal * rate_of_interest * time_period) / 100
+
+# Display the result
+print(f"The simple interest on Rs. {principal} for {time_period} years at {rate_of_interest}% per year is Rs. {simple_interest}.")
+
+

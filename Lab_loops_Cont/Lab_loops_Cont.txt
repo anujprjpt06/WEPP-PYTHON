@@ -1,0 +1,125 @@
+# 1. Print the first 10 natural numbers using for loop.
+# Natural numbers 1,2,3,4,5,6,...,100
+for i in range(1,11):
+    print(i)
+
+-------------------------------------------------------------------------------------------
+
+# 2. Python program to check if the given string is a palindrome.
+
+# A palindrome is a sequence of characters that reads the same backward as forward.
+# This can include words, numbers, phrases, or other sequences of symbols.
+# For example, the words "madam," "racecar," and the number "12321" are all palindromes.
+
+string = input("Enter your letter : ")
+string1 = string.casefold()
+
+# this string is reverse.
+reverse = reversed(string)
+
+if list(string) == list(reverse):
+    print("The letter is a palimndrome")
+
+else:
+    print("The letter is not a palindrome")
+
+
+-------------------------------------------------------------------------------------------
+
+# 3. Python program to check if a given number is an Armstrong number.
+
+# An Armstrong number is a number that is equal to the sum of its own digits raised to the power of the number of digits.
+# For example, the number 153 is an Armstrong number since 1^3 + 5^3 + 3^3 = 153
+# Armstrong number is also known as the narcissistic number, plusperfect digital invariant (PPDI), or plus perfect number.
+
+
+Check_Armstrong_Number = int(input("Enter a number : "))
+num = Check_Armstrong_Number
+digit , armstrong_sum = 0, 0
+
+length = len(str(num))
+
+for i in range(length):
+    digit = num % 10
+    num = num // 10
+    armstrong_sum += pow(digit, length)
+
+if armstrong_sum == Check_Armstrong_Number:
+    print("It is an Armstrong Number : ",Check_Armstrong_Number)
+else:
+    print("Not an Armstrong Number : ",Check_Armstrong_Number)
+    
+
+-------------------------------------------------------------------------------------------
+
+# 4. Python program to get the Fibonacci series between 0 to 50.
+
+# The Fibonacci series is the sequence where each number is the sum of the previous two numbers of the sequence.
+# The first two numbers of the Fibonacci series are 0 and 1 and are used to generate the Fibonacci series.
+
+
+nterms = int(input("How many terms? "))
+
+# first two terms
+n1, n2 = 0, 1
+count = 0
+
+# check if the number of terms is valid
+if nterms <= 0:
+   print("Please enter a positive integer")
+# if there is only one term, return n1
+elif nterms == 1:
+   print("Fibonacci sequence upto",nterms,":")
+   print(n1)
+# generate fibonacci sequence
+else:
+   print("Fibonacci sequence:")
+   while count < nterms:
+       print(n1)
+       nth = n1 + n2
+       # update values
+       n1 = n2
+       n2 = nth
+       count += 1
+
+
+
+-------------------------------------------------------------------------------------------
+
+# 5. Python program to check the validity of password input by users.
+
+# The re module in Python provides support for working with regular expressions, which are sequences of characters that define search patterns.
+# Regular expressions are powerful tools for matching, searching, and manipulating text based on specific patterns.
+
+
+import re
+
+def check_password_validity(password):
+    # Check the length of the password
+    if len(password) < 8:
+        return "Password must be at least 8 characters long."
+    
+    # Check for at least one uppercase letter
+    if not re.search(r'[A-Z]', password):
+        return "Password must contain at least one uppercase letter."
+    
+    # Check for at least one lowercase letter
+    if not re.search(r'[a-z]', password):
+        return "Password must contain at least one lowercase letter."
+    
+    # Check for at least one digit
+    if not re.search(r'[0-9]', password):
+        return "Password must contain at least one digit."
+    
+    # Check for at least one special character
+    if not re.search(r'[!@#$%^&*(),.?":{}|<>]', password):
+        return "Password must contain at least one special character."
+    
+    return "Password is valid."
+
+# Take input from the user
+password = input("Enter your password: ")
+
+# Check the validity of the password
+result = check_password_validity(password)
+print(result)

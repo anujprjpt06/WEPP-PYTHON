@@ -1,0 +1,71 @@
+# 1.Calculate the multiplication and sum of two numbers
+
+number1 = int(input("Enter the first Number : "))
+number2 = int(input("Enter the second Number : "))
+
+
+add_numbers = number1 + number2
+print("Addition of two numbers : ",add_numbers)
+
+multi_numbers = number1 * number2
+print("Multiplication of two numbers : ",multi_numbers)
+
+
+------------------------------------------------------------------------------------------------
+
+# 2. Declare two variables and print that which variable is largest using ternary operators
+
+
+# Program to demonstrate ternary operator
+a = 20
+b = 10
+
+# Python Ternary Operator
+# Syntax: true_value if condition else false_value
+
+min = "a is minimum" if a < b else "b is minimum"
+
+print(min)
+
+
+--------------------------------------------------------------------------------------------------
+
+# 3. Python program to convert the temperature in degree centigrade to Fahrenheit
+
+# Temperature in celsius degree
+
+celsius = float(input("Enter temperature in Celsius : "))
+
+# Converting the temperature to fahrenheit using the formula
+
+fahrenheit = (celsius * 9/5) + 32
+
+print("Celsius is equivalent to Fahrenheit : ",fahrenheit)
+
+
+--------------------------------------------------------------------------------------------------
+
+# 4. Python program to find the area of a triangle whose sides are given
+
+# Python Program to find the area of triangle
+
+a = 5
+b = 6
+c = 7
+
+# Uncomment below to take inputs from the user
+# a = float(input('Enter first side: '))
+# b = float(input('Enter second side: '))
+# c = float(input('Enter third side: '))
+
+# calculate the semi-perimeter
+s = (a + b + c) / 2
+
+# calculate the area
+area = (s*(s-a)*(s-b)*(s-c)) ** 0.5
+print('The area of the triangle is %0.2f' %area)
+
+
+# Note - %0.2f floating-point specifies at least 0 wide and 2 numbers after the decimal.
+#        If you use %0.5f, then it will give 5 numbers after the decimal.
+
