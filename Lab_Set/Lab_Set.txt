@@ -1,0 +1,61 @@
+# 1. Write a Python program to Get Only unique items from two sets.
+
+set1 = {10,20,30,40,50}
+set2 = {30,40,50,60,70}
+
+# Get the unique items from the both sets (union)
+union_result = set1.union(set2) # or set1 | set2
+
+print("Output : ",union_result)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+#  2. Write a Python program to Return a set of elements present in Set A or B, but not both.
+
+set1 = {10,20,30,40,50}
+set2 = {30,40,50,60,70}
+
+# Get the elements that are in set1 or set2 but not in both (symmetric difference)
+result = set1.symmetric_difference(set2)
+
+print("Output:", result)
+
+
+##The symmetric_difference() method is used to find the elements that are present in either set1 or set2, but not in both.
+##This returns a set with unique elements from both sets.
+
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+# 3. Write a Python program to Check if two sets have any elements in common. If yes, display the common elements.
+
+set1 = {10,20,30,40,50}
+set2 = {60,70,80,90,10}
+
+# Find the commom elements
+common_elements = set1.intersection(set2)
+
+# Check if there are common elements
+if common_elements:
+    print("Output : ",common_elements)
+else:
+    print("No Common elements")
+
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+# 4. Write a Python program to Remove items from set1 that are not common to both set1 and set2.
+
+set1 = {10,20,30,40,50}
+set2 = {30,40,50,60,70}
+
+# Keep only the common elements in set1
+set1.intersection_update(set2)
+
+print(set1)
+
+
+##The intersection_update() method modifies set1 to keep only the elements that are present in both set1 and set2.
+
+
